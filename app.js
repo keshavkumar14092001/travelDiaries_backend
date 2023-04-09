@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 // Allowing request from other platform:
 app.use(cors());
