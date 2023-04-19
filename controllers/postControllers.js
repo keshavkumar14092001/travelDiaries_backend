@@ -6,7 +6,7 @@ const User = require("../models/User.js");
 const getAllPosts = async (req, res, next) => {
   let posts;
   try {
-    posts = await Post.find().populate("user");
+    posts = await Post.find().sort({ createdAt: -1 }).populate("user");
   } catch (error) {
     return console.log(error);
   }
